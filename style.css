@@ -1,0 +1,124 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #94abdd;
+}
+
+/* Navigation Bar Styles */
+nav {
+  background-color: #2c3e50; /* Semi-dark blue */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%; /* Make the logo circular */
+  object-fit: cover; /* Ensure the image fits inside the circle */
+  border: 2px solid white; /* Optional white border around the circle */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: red; /* Hover effect: Red background */
+  color: white;
+}
+
+/* Responsive Menu for Smaller Screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none; /* Hidden by default */
+    background-color: #2c3e50;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul.active {
+    display: flex; /* Show menu when active */
+  }
+
+  nav .menu-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    display: block;
+  }
+}
+
+h2, h1, h3 {
+    color:white;
+}
+h1 {
+  font-size: xx-large;
+}
+.row {
+  display: flex;
+  margin-left:-5px;
+  margin-right:-5px;
+  background-color: black;
+}
+
+.column {
+  flex: 30%;
+  padding: 80px;
+  background-color: black;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+th, td {
+  text-align: center;
+  padding: 16px;
+  border: none;
+}
+button {
+  height: 50px;
+  width:200px;
+  background-color: lightblue;
+  font-size : 20px;
+  text-decoration: underline;
+}
+table.table1 {
+  background-color: black;
+  border-collapse: collapse;
+  border: none;
+}
+table.table2 {
+  background-color: black;
+}

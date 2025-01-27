@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Protected Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('DSC_0139-1.jpg') no-repeat center center/cover;
+    }
+    .password-container {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+      max-width: 300px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #error-message {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="password-container" id="password-container">
+    <h2>Enter Password</h2>
+    <input type="password" id="password-input" placeholder="Password">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="error-message">Incorrect password. Try again.</p>
+  </div>
+
+  <script>
+    const correctPassword = "mbps2025"; 
+
+    function checkPassword() {
+      const input = document.getElementById("password-input").value;
+      const errorMessage = document.getElementById("error-message");
+
+      if (input === correctPassword) {
+        
+        window.location.href = "homepage.html"; 
+      } else {
+        errorMessage.style.display = "block";
+      }
+    }  
+  </script>
+</body>
+</html>
